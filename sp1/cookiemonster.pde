@@ -1,12 +1,14 @@
 class CookieMonster
 {
+  // attributs
   color black, blue, cookie, green;
 
+  // body position
   int x, y;
-  
   int xSpeed = 10;
   int ySpeed = 10;
 
+  // constructor
   CookieMonster(color blackCol, color blueCol, color cookieCol, color greenCol, int tempX, int tempY)
   {
     black = blackCol;
@@ -18,6 +20,7 @@ class CookieMonster
     this.y = tempY;
   }
 
+  // method that calls all the body part methods
   void drawAll()
   {
     leftLeg();
@@ -31,8 +34,8 @@ class CookieMonster
     eyes();
   }
 
-  // all is missing parameters
 
+  // legs
   void leftLeg()
   {
     fill(blue);
@@ -72,6 +75,7 @@ class CookieMonster
     ellipse(x-207, y-341, 30, 70);
   }
 
+  // Arms
   void leftArm()
   {
     fill(blue);
@@ -109,45 +113,52 @@ class CookieMonster
 
   void mouth()
   {
+    // lips
     fill(black);
     stroke(black);
     strokeWeight(3);
     ellipse(x-205, y-375, 50, 25);
 
+    // inside of the mouth
     fill(green);
     ellipse(x-205, y-375, 30, 15);
   }
 
   void eyes()
   {
+    // eye
     fill(green);
     stroke(black);
     strokeWeight(3);
     ellipse(x-205, y-420, 25, 40);
     ellipse(x-205, y-420, 25, 40);
 
+    // eye profile
     fill(black);
     stroke(black);
     strokeWeight(3);
     ellipse(x-205, y-420, 10, 10);
     ellipse(x-205, y-420, 10, 10);
   }
-  void moveLeft() 
+
+  // moving the body in the x direction left/right
+  void moveLeft()
   {
-   this.x -= xSpeed;
+    this.x -= xSpeed;
   }
-  
-  void moveRight() 
+
+  void moveRight()
   {
-   this.x += xSpeed;
+    this.x += xSpeed;
   }
-  
-  void moveUp() 
+
+  // moving the body in the y direction up/down
+  void moveUp()
   {
-   this.y -= ySpeed;
+    this.y -= ySpeed;
   }
-  
-  void moveDown() 
+
+  void moveDown()
   {
     this.y += ySpeed;
   }

@@ -23,31 +23,35 @@ void setup()
 void draw()
 {
   background(255);
-  
-  
+
+
   //(Datatype element : collection) returns the action of the element through the arrayList
+
   for (FatKarateMan man : fatKarateMan)
   {
+    // method call that calls the body
     man.drawAll();
   }
-  
+
   for (CookieMonster monsters : cookieMonster)
   {
+    // method call that calls the body
     monsters.drawAll();
   }
 }
 
-
-//  using the system function k
 void keyPressed()
 {
   for (FatKarateMan man : fatKarateMan)
   {
+
     if (key == 'a' || key == 'A')
     {
+      // method call that calls the body to move in x left direction when a/A is pressed / fatkarateMan
       man.moveLeft();
     } else if (key == 'd' || key == 'D')
     {
+      // method call that calls the body to move in x right direction when d/D is pressed / fatkarateMan
       man.moveRight();
     }
   }
@@ -56,9 +60,11 @@ void keyPressed()
   {
     if (key == 'w' || key == 'W')
     {
+      // method call that calls the body to move in y up direction when w/W is pressed / fatkarateMan
       man.moveUp();
     } else if (key == 's' || key == 'S')
     {
+      // method call that calls the body to move in y down direction when s/S is pressed / fatkarateMan
       man.moveDown();
     }
   }
@@ -67,9 +73,11 @@ void keyPressed()
   {
     if (key == 'j' || key == 'J')
     {
+      // method call that calls the body to move in x left direction when j/J is pressed / cookieMonster
       monster.moveLeft();
     } else if (key == 'l' || key == 'L')
     {
+      // method call that calls the body to move in x right direction when l/L is pressed / cookieMonster
       monster.moveRight();
     }
   }
@@ -78,9 +86,11 @@ void keyPressed()
   {
     if (key == 'i' || key == 'I')
     {
+      // method call that calls the body to move in y up direction when i/I is pressed / cookieMonster
       monster.moveUp();
     } else if (key == 'k' || key == 'K')
     {
+      // method call that calls the body to move in y down direction when k/K is pressed / cookieMonster
       monster.moveDown();
     }
   }

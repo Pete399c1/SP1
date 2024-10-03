@@ -2,11 +2,11 @@ class FatKarateMan
 {
   // attributes
   color body, black, white, red;
-  
+
   int x, y;
   int xSpeed = 20;
   int ySpeed = 20;
-// constructer
+  // constructer
   FatKarateMan(color bodyColor, color blackColor, color whiteColor, color redColor, int tempX, int tempY)
   {
     body = bodyColor;
@@ -17,7 +17,7 @@ class FatKarateMan
     this.x = tempX;
     this.y = tempY;
   }
-// method that calls all the body part methods
+  // method that calls all the body part methods
   void drawAll()
   {
     stomach();
@@ -41,6 +41,7 @@ class FatKarateMan
     ellipse(x-630, y-250, 150, 145);
   }
 
+  // Arms
   void rightArm()
   {
     fill(body);
@@ -68,10 +69,9 @@ class FatKarateMan
     ellipse(x-715, y-270, 40, 70);
   }
 
-
+  // legs
   void rightLeg()
   {
-    // Legs
     fill(black);
     stroke(black);
     strokeWeight(3);
@@ -138,35 +138,42 @@ class FatKarateMan
 
   void mouth()
   {
+    // lips
     fill(red);
     stroke(black);
     strokeWeight(3);
     ellipse(x-630, y-360, 50, 25);
 
+    // the inside of the mouth
     fill(white);
     ellipse(x-630, y-360, 30, 15);
   }
 
+
   void eyes()
   {
+    // eye
     fill(white);
     stroke(black);
     strokeWeight(3);
     ellipse(x-655, y-410, 25, 25);
     ellipse(x-655, y-410, 25, 25);
 
+    // eye profile
     fill(black);
     stroke(black);
     strokeWeight(3);
     ellipse(x-655, y-410, 10, 10);
     ellipse(x-655, y-410, 10, 10);
 
+    // eye
     fill(white);
     stroke(black);
     strokeWeight(3);
     ellipse(x-603, y-410, 25, 25);
     ellipse(x-603, y-410, 25, 25);
 
+    // eye profile
     fill(black);
     stroke(black);
     strokeWeight(3);
@@ -174,6 +181,7 @@ class FatKarateMan
     ellipse(x-603, y-410, 10, 10);
   }
 
+  // moving the body in the x direction left/right
   void moveLeft()
   {
     this.x -= xSpeed;
@@ -184,6 +192,7 @@ class FatKarateMan
     this.x += xSpeed;
   }
 
+  // moving the body in the y direction up/down
   void moveUp()
   {
     this.y -= ySpeed;
