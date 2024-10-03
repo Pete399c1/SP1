@@ -1,11 +1,12 @@
 class FatKarateMan
 {
+  // attributes
   color body, black, white, red;
-
+  
   int x, y;
-  int xSpeed = 10;
-  int ySpeed = 10;
-
+  int xSpeed = 20;
+  int ySpeed = 20;
+// constructer
   FatKarateMan(color bodyColor, color blackColor, color whiteColor, color redColor, int tempX, int tempY)
   {
     body = bodyColor;
@@ -16,7 +17,7 @@ class FatKarateMan
     this.x = tempX;
     this.y = tempY;
   }
-
+// method that calls all the body part methods
   void drawAll()
   {
     stomach();
